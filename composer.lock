@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44c2a445e75257efd88e12f9a4fdd1bd",
+    "content-hash": "b92c5f213c1cb3fa2a5e378319d9f346",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -157,92 +157,32 @@
             "time": "2020-05-25T17:44:05+00:00"
         },
         {
-            "name": "pheature/inmemory-toggle",
-            "version": "1.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pheature-flags/inmemory-toggle.git",
-                "reference": "1014086c6c350c416be99fe55744675b91a86eb9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/inmemory-toggle/zipball/1014086c6c350c416be99fe55744675b91a86eb9",
-                "reference": "1014086c6c350c416be99fe55744675b91a86eb9",
-                "shasum": ""
-            },
-            "require": {
-                "pheature/toggle-core": "@dev",
-                "pheature/toggle-model": "@dev",
-                "php": "^7.4|^8.0"
-            },
-            "require-dev": {
-                "infection/infection": "^0.21.0",
-                "phpro/grumphp": "^1.0",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^8.0 || ^9.0",
-                "squizlabs/php_codesniffer": "^3.4",
-                "symfony/var-dumper": "^4.2 || ^5.0",
-                "vimeo/psalm": "^4.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pheature\\InMemory\\Toggle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "kpicaza"
-                }
-            ],
-            "description": "Pheature flags In Memory toggle implementation library.",
-            "keywords": [
-                "feature-flags",
-                "feature-toggle"
-            ],
-            "support": {
-                "source": "https://github.com/pheature-flags/inmemory-toggle/tree/1.0.x"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/pheature-flags",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-04-20T21:35:35+00:00"
-        },
-        {
             "name": "pheature/symfony-toggle",
             "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pheature-flags/symfony-toggle.git",
-                "reference": "6cc3d05a919c0b9e12db2ef5527d3fd513f739a2"
+                "reference": "acdae6dbe1e62f1683d32ed76435c6cb3e494981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/symfony-toggle/zipball/6cc3d05a919c0b9e12db2ef5527d3fd513f739a2",
-                "reference": "6cc3d05a919c0b9e12db2ef5527d3fd513f739a2",
+                "url": "https://api.github.com/repos/pheature-flags/symfony-toggle/zipball/acdae6dbe1e62f1683d32ed76435c6cb3e494981",
+                "reference": "acdae6dbe1e62f1683d32ed76435c6cb3e494981",
                 "shasum": ""
             },
             "require": {
                 "pheature/toggle-core": "@dev",
-                "pheature/toggle-crud": "@dev",
                 "pheature/toggle-crud-psr11-factories": "@dev",
-                "pheature/toggle-crud-psr7-api": "@dev",
                 "pheature/toggle-model": "@dev",
                 "php": "^7.4|^8.0",
-                "symfony/framework-bundle": "~5.0",
-                "symfony/psr-http-message-bridge": "^2.1"
+                "symfony/framework-bundle": "~5.0"
             },
             "require-dev": {
                 "doctrine/dbal": ">=2.5 || ^3.0.0",
                 "infection/infection": "^0.21.0",
+                "pheature/inmemory-toggle": "@dev",
+                "pheature/toggle-crud": "@dev",
+                "pheature/toggle-crud-psr7-api": "@dev",
                 "phpro/grumphp": "^1.0",
                 "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^8.0 || ^9.0",
@@ -251,7 +191,10 @@
                 "vimeo/psalm": "^4.4"
             },
             "suggest": {
-                "doctrine/dbal": "Allows using Dbal toggle management implementation."
+                "pheature/dbal-toggle": "Allows using Dbal toggle management implementation.",
+                "pheature/inmemory-toggle": "Allows using Inmemory toggle management implementation.",
+                "pheature/toggle-crud": "Allows using toggle management CRUD implementation.",
+                "pheature/toggle-crud-psr7-api": "Allows using toggle management CRUD HTTP API."
             },
             "default-branch": true,
             "type": "library",
@@ -295,7 +238,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-25T18:45:36+00:00"
+            "time": "2021-04-27T21:34:45+00:00"
         },
         {
             "name": "pheature/toggle-core",
@@ -303,12 +246,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pheature-flags/toggle-core.git",
-                "reference": "935630a2d465166a33fd22c3af8fa9cc7e6bca28"
+                "reference": "463cb5d5a55361b37ed12e017b4ad2ef40b4ffff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/toggle-core/zipball/935630a2d465166a33fd22c3af8fa9cc7e6bca28",
-                "reference": "935630a2d465166a33fd22c3af8fa9cc7e6bca28",
+                "url": "https://api.github.com/repos/pheature-flags/toggle-core/zipball/463cb5d5a55361b37ed12e017b4ad2ef40b4ffff",
+                "reference": "463cb5d5a55361b37ed12e017b4ad2ef40b4ffff",
                 "shasum": ""
             },
             "require": {
@@ -353,7 +296,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-24T14:41:09+00:00"
+            "time": "2021-04-25T18:37:46+00:00"
         },
         {
             "name": "pheature/toggle-crud",
@@ -421,12 +364,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pheature-flags/toggle-crud-psr11-factories.git",
-                "reference": "a7af172c8245a76eb0b4f49b0bde2f46fb5b5d11"
+                "reference": "e5e1d13ddb7e346ddc6a18a629d0e2c91e9bcba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/toggle-crud-psr11-factories/zipball/a7af172c8245a76eb0b4f49b0bde2f46fb5b5d11",
-                "reference": "a7af172c8245a76eb0b4f49b0bde2f46fb5b5d11",
+                "url": "https://api.github.com/repos/pheature-flags/toggle-crud-psr11-factories/zipball/e5e1d13ddb7e346ddc6a18a629d0e2c91e9bcba8",
+                "reference": "e5e1d13ddb7e346ddc6a18a629d0e2c91e9bcba8",
                 "shasum": ""
             },
             "require": {
@@ -481,7 +424,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-24T20:20:05+00:00"
+            "time": "2021-04-25T18:37:47+00:00"
         },
         {
             "name": "pheature/toggle-crud-psr7-api",
@@ -554,12 +497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pheature-flags/toggle-model.git",
-                "reference": "6cfe9ac68d96da8b2f036a9919ba9b858d8dc856"
+                "reference": "f191a2ad6da42a96217cc58a788fddb722cab883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/toggle-model/zipball/6cfe9ac68d96da8b2f036a9919ba9b858d8dc856",
-                "reference": "6cfe9ac68d96da8b2f036a9919ba9b858d8dc856",
+                "url": "https://api.github.com/repos/pheature-flags/toggle-model/zipball/f191a2ad6da42a96217cc58a788fddb722cab883",
+                "reference": "f191a2ad6da42a96217cc58a788fddb722cab883",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +548,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-24T14:41:08+00:00"
+            "time": "2021-04-25T18:37:48+00:00"
         },
         {
             "name": "psr/cache",
@@ -2855,94 +2798,6 @@
             "time": "2021-01-07T16:49:33+00:00"
         },
         {
-            "name": "symfony/psr-http-message-bridge",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "81db2d4ae86e9f0049828d9343a72b9523884e5d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/81db2d4ae86e9f0049828d9343a72b9523884e5d",
-                "reference": "81db2d4ae86e9f0049828d9343a72b9523884e5d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "psr/http-message": "^1.0",
-                "symfony/http-foundation": "^4.4 || ^5.0"
-            },
-            "require-dev": {
-                "nyholm/psr7": "^1.1",
-                "psr/log": "^1.1",
-                "symfony/browser-kit": "^4.4 || ^5.0",
-                "symfony/config": "^4.4 || ^5.0",
-                "symfony/event-dispatcher": "^4.4 || ^5.0",
-                "symfony/framework-bundle": "^4.4 || ^5.0",
-                "symfony/http-kernel": "^4.4 || ^5.0",
-                "symfony/phpunit-bridge": "^4.4.19 || ^5.2"
-            },
-            "suggest": {
-                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "2.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "PSR HTTP message bridge",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr-17",
-                "psr-7"
-            ],
-            "support": {
-                "issues": "https://github.com/symfony/psr-http-message-bridge/issues",
-                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v2.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-02-17T10:35:25+00:00"
-        },
-        {
             "name": "symfony/routing",
             "version": "v5.2.6",
             "source": {
@@ -3642,16 +3497,16 @@
         },
         {
             "name": "symfony/webpack-encore-bundle",
-            "version": "v1.11.1",
+            "version": "v1.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/webpack-encore-bundle.git",
-                "reference": "395b60a549ded8e7f77f0d551815d7555e2d9eb0"
+                "reference": "f282fb17ffa4839ba491eb7e3f5ffdd40c86f969"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/395b60a549ded8e7f77f0d551815d7555e2d9eb0",
-                "reference": "395b60a549ded8e7f77f0d551815d7555e2d9eb0",
+                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/f282fb17ffa4839ba491eb7e3f5ffdd40c86f969",
+                "reference": "f282fb17ffa4839ba491eb7e3f5ffdd40c86f969",
                 "shasum": ""
             },
             "require": {
@@ -3693,7 +3548,7 @@
             "description": "Integration with your Symfony app & Webpack Encore!",
             "support": {
                 "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
-                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.11.1"
+                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.11.2"
             },
             "funding": [
                 {
@@ -3709,7 +3564,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-17T13:45:51+00:00"
+            "time": "2021-04-26T12:48:17+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -4066,9 +3921,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pheature/inmemory-toggle": 20,
-        "pheature/symfony-toggle": 20,
-        "pheature/toggle-crud-psr11-factories": 20
+        "pheature/symfony-toggle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

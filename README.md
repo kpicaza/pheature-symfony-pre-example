@@ -16,9 +16,9 @@ To reduce the time to market, we will iterate over the program updating and addi
 
 We will build a landing page with a few requirements:
 
-* It should show the arstisan's logo.
-* It should show the artisans's commercial name.
-* It should show some amigurumi pictures.
-* It should show contact information.
+- [ ] It should show the arstisan's logo.
+- [ ] It should show the artisans's commercial name.
+- [ ] It should show some amigurumi pictures.
+- [ ] It should show contact information.
 
 

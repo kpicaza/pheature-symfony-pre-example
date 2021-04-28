@@ -14,9 +14,6 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
-    "pheature/inmemory-toggle": {
-        "version": "1.0.x-dev"
-    },
     "pheature/symfony-toggle": {
         "version": "1.0.x-dev"
     },
@@ -162,9 +159,6 @@
     },
     "symfony/profiler-pack": {
         "version": "v1.0.5"
-    },
-    "symfony/psr-http-message-bridge": {
-        "version": "v2.1.0"
     },
     "symfony/routing": {
         "version": "5.1",

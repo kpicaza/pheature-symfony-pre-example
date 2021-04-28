@@ -1,6 +1,6 @@
 pheature_flags:
   driver: inmemory
   toggles:
-    -
-      id: show_brand_logo
-      enabled: true
+    # RELEASE TOGGLES
+    - { id: show_brand_logo, enabled: true }
+    - { id: show_commercial_name, enabled: true }

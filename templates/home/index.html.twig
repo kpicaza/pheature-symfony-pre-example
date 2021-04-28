@@ -7,9 +7,13 @@
         <div class="container">
             <h1 class="display-4 text-center">
                 {% if show_brand_logo %}
-                    <i class="material-icons">scatter_plot</i>
+                    <i class="material-icons">pets</i>
                 {% endif %}
-                Welcome to Site A
+                {% if show_commercial_name %}
+                    {{ commercial_name }}
+                {% else %}
+                    Welcome to Site A
+                {% endif %}
             </h1>
             <hr class="my-4">
             <p class="lead text-center">

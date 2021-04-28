@@ -19,8 +19,12 @@ final class HomePage extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
+        $showCommercialName = $this->toggle->isEnabled('show_commercial_name');
+
         return $this->render('home/index.html.twig', [
             'show_brand_logo' => $this->toggle->isEnabled('show_brand_logo'),
+            'show_commercial_name' => $showCommercialName,
+            'commercial_name' => $showCommercialName ? 'My Little Friend Shop' : null,
         ]);
     }
 }

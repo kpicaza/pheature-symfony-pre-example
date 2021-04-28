@@ -1,8 +1,21 @@
-
 {% extends 'base.html.twig' %}
 
-{% block title %}Sign up!{% endblock %}
+{% block title %}Site A - Homepage{% endblock %}
+
+{% block heading %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4 text-center">
+                <i class="material-icons">scatter_plot</i>
+                Welcome to Site A
+            </h1>
+            <hr class="my-4">
+            <p class="lead text-center">
+                <a class="btn btn-primary btn-lg" href="#" role="button">The Amigurumi artisan Shop</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
 
 {% block body %}
-    <div data-controller="hello"></div>
 {% endblock %}

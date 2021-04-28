@@ -5,8 +5,15 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-// any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import Popper from  'popper.js';
+global.Popper = Popper;
+const $ = require('jquery');
+global.$ = global.jQuery = $;
+require('bootstrap-material-design');
+import 'bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
+import './styles/app.scss'
+
+$(document).ready(function() { $('body').bootstrapMaterialDesign(); });
 
 // start the Stimulus application
 import './bootstrap';

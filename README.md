@@ -2,9 +2,25 @@
 
 Welcome to our Symfony Toggle example, In this app we will explain how to use Pheature Flags library in an example ecommerce-like Symfony Web App.
 
-In the following lines we will define the initial description of the ecommerce and also we will define a short of user-stories. 
+In the following lines we will define the initial description of the ecommerce and also we will define a short of user-stories.
 
 * *This is example app, every detail in the context, definition, and|or user-stories is fictional and created for learning purposes*
+
+## Requirements
+
+* PHP >= 8.0
+* yarn  
+* composer
+
+## Install 
+
+```bash
+git clone git@github.com:kpicaza/pheature-symfony-pre-example.git
+cd pheature-symfony-pre-example
+composer upddate
+yarn run encore production
+php -S 127.0.0.1:8000 -t public ## Enjoy!!!
+```
 
 ## Context
 

@@ -6,7 +6,9 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4 text-center">
-                <i class="material-icons">scatter_plot</i>
+                {% if show_brand_logo %}
+                    <i class="material-icons">scatter_plot</i>
+                {% endif %}
                 Welcome to Site A
             </h1>
             <hr class="my-4">

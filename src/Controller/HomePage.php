@@ -12,10 +12,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class HomePage extends AbstractController
 {
+    public function __construct(
+       private Toggle $toggle,
+    ) {}
+
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
-        return $this->render('home/index.html.twig', []);
+        return $this->render('home/index.html.twig', [
+            'show_brand_logo' => $this->toggle->isEnabled('show_brand_logo'),
+        ]);
     }
 }
     

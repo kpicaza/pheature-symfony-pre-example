@@ -14,6 +14,9 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "pheature/inmemory-toggle": {
+        "version": "1.0.x-dev"
+    },
     "pheature/symfony-toggle": {
         "version": "1.0.x-dev"
     },

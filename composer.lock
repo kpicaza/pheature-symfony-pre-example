@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b92c5f213c1cb3fa2a5e378319d9f346",
+    "content-hash": "f728990e93e78c790dfd1a70918a9965",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -155,6 +155,66 @@
                 }
             ],
             "time": "2020-05-25T17:44:05+00:00"
+        },
+        {
+            "name": "pheature/inmemory-toggle",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pheature-flags/inmemory-toggle.git",
+                "reference": "d241caa6b91911f97205b06bbbe1abacc3953220"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pheature-flags/inmemory-toggle/zipball/d241caa6b91911f97205b06bbbe1abacc3953220",
+                "reference": "d241caa6b91911f97205b06bbbe1abacc3953220",
+                "shasum": ""
+            },
+            "require": {
+                "pheature/toggle-core": "@dev",
+                "pheature/toggle-model": "@dev",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "infection/infection": "^0.21.0",
+                "phpro/grumphp": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/var-dumper": "^4.2 || ^5.0",
+                "vimeo/psalm": "^4.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pheature\\InMemory\\Toggle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "kpicaza"
+                }
+            ],
+            "description": "Pheature flags In Memory toggle implementation library.",
+            "keywords": [
+                "feature-flags",
+                "feature-toggle"
+            ],
+            "support": {
+                "source": "https://github.com/pheature-flags/inmemory-toggle/tree/1.0.x"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/pheature-flags",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-25T18:37:50+00:00"
         },
         {
             "name": "pheature/symfony-toggle",
@@ -3921,6 +3981,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "pheature/inmemory-toggle": 20,
         "pheature/symfony-toggle": 20
     },
     "prefer-stable": true,

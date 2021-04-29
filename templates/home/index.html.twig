@@ -25,10 +25,17 @@
 
 {% block body %}
     {% if show_home_pictures %}
-        <div class="mx-auto" style="width: 500px;">
+        <div class="text-center">
             <img src="/images/pink-doll.png"/>
             <img src="/images/ice-cream.png"/>
             <img src="/images/red-rabbit.png"/>
+        </div>
+    {% endif %}
+
+    {% if show_contact_info %}
+        <div class=" text-center mt-5">
+            <i class="material-icons">twitter</i>
+            <p class="lead">Make your order via DM at <strong>@amigunerumi</strong>'s Twitter account.</p>
         </div>
     {% endif %}
 {% endblock %}

@@ -5,3 +5,4 @@ pheature_flags:
     - { id: show_brand_logo, enabled: true }
     - { id: show_commercial_name, enabled: true }
     - { id: show_home_pictures, enabled: true }
+    - { id: show_contact_info, enabled: true }

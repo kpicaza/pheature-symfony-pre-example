@@ -32,12 +32,20 @@ To reduce the time to market, we will iterate over the program updating and addi
 
 We will build a landing page with a few requirements:
 
+In that case we will use in-memory toggle implementation to use **release toggles**.
+
 - [x] It should show the arstisan's logo.
 - [x] It should show the artisans's commercial name.
 - [x] It should show some amigurumi pictures.
-- [ ] It should show contact information.
+- [x] It should show contact information.
 
-2. Second iteration
+2. Second iteration:
+
+In order, to make our website looks like a real e-commerce, the first we need is to create some kind of **catalog**. 
+
+The catalog should show a list of available products. To be able to show products the thing we need are the products itself.
+A **product** should have at least a *name*, *picture*, and *price*. 
+
 
 - [ ] It should have products
 - [ ] It should have a backoffice to add products

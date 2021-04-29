@@ -18,6 +18,7 @@ In the following lines we will define the initial description of the ecommerce a
 git clone git@github.com:kpicaza/pheature-symfony-pre-example.git
 cd pheature-symfony-pre-example
 composer upddate
+yarn
 yarn run encore production
 php -S 127.0.0.1:8000 -t public ## Enjoy!!!
 ```
@@ -46,6 +47,9 @@ In order, to make our website looks like a real e-commerce, the first we need is
 The catalog should show a list of available products. To be able to show products the thing we need are the products itself.
 A **product** should have at least a *name*, *picture*, and *price*. 
 
+To create the products, we will need an authentication system for content editors, and an administration panel where manage the products.
 
+- [ ] It should have content editor users
 - [ ] It should have products
 - [ ] It should have a backoffice to add products
+- [ ] It should have a catalog that shows available products

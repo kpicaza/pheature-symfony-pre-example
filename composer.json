@@ -10,6 +10,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/annotations": "^1.12",
+        "easycorp/easyadmin-bundle": "^3.2",
         "pheature/inmemory-toggle": "1.0.x-dev",
         "pheature/symfony-toggle": "1.0.x-dev",
         "symfony/console": "5.2.*",

@@ -49,7 +49,7 @@ A **product** should have at least a *name*, *picture*, and *price*.
 
 To create the products, we will need an authentication system for content editors, and an administration panel where manage the products.
 
-- [ ] It should have content editor users
+- [x] It should have content editor users
 - [ ] It should have products
 - [ ] It should have a backoffice to add products
 - [ ] It should have a catalog that shows available products

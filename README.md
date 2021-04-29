@@ -34,7 +34,10 @@ We will build a landing page with a few requirements:
 
 - [x] It should show the arstisan's logo.
 - [x] It should show the artisans's commercial name.
-- [ ] It should show some amigurumi pictures.
+- [x] It should show some amigurumi pictures.
 - [ ] It should show contact information.
 
+2. Second iteration
 
+- [ ] It should have products
+- [ ] It should have a backoffice to add products

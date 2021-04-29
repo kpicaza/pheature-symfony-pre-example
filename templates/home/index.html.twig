@@ -24,4 +24,11 @@
 {% endblock %}
 
 {% block body %}
+    {% if show_home_pictures %}
+        <div class="mx-auto" style="width: 500px;">
+            <img src="/images/pink-doll.png"/>
+            <img src="/images/ice-cream.png"/>
+            <img src="/images/red-rabbit.png"/>
+        </div>
+    {% endif %}
 {% endblock %}

@@ -1,0 +1,54 @@
+version: "3"
+
+volumes:
+  redis:
+  mysql_data:
+
+services:
+
+  nginx:
+    build: docker/nginx
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - redis
+      - php
+    depends_on:
+      - php
+    volumes:
+      - redis:/var/lib/redis
+      - ./:/opt/app
+
+  php:
+    build: docker/php
+    expose:
+      - 9000
+    links:
+      - redis
+    volumes:
+      - redis:/var/lib/redis
+      - ./:/opt/app
+    working_dir: /opt
+
+  mysql:
+    build: docker/mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: amigunerumi
+      MYSQL_USER: devel
+      MYSQL_PASSWORD: devel
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  redis:
+    image: redis:latest
+    volumes:
+      - redis:/var/lib/redis

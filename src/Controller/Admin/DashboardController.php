@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Product;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -35,8 +36,13 @@ class DashboardController extends AbstractDashboardController
             ];
         }
 
+        $products = [
+            MenuItem::section('Products'),
+            MenuItem::linkToCrud('Products', 'fa fa-gift', Product::class),
+        ];
+
         return array_merge([
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
-        ], $users);
+        ], $users, $products);
     }
 }

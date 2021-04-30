@@ -22,6 +22,7 @@ security:
                 username_parameter: _username  #esto es para que el logueo se haga por el email
                 login_path: login
                 check_path: login
+                default_target_path: /admin
             logout:
                 path:   /logout
                 target: /

@@ -1,6 +1,6 @@
 # Pheature Driven Symfony Example
 
-Welcome to our Symfony Toggle example, In this app we will explain how to use Pheature Flags library in an example ecommerce-like Symfony Web App.
+Welcome to our Symfony Toggle example, In this app we will explain how to use [Pheature Flags](https://pheatureflags.io) library in an example ecommerce-like Symfony Web App.
 
 In the following lines we will define the initial description of the ecommerce and also we will define a short of user-stories.
 

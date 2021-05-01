@@ -22,7 +22,7 @@ final class HomePage extends AbstractController
 
         return $this->render('home/index.html.twig', [
             'show_brand_logo' => $this->toggle->isEnabled('show_brand_logo'),
-            'show_home_pictures' => $this->toggle->isEnabled('show_home_pictures'),
+            'show_home_dynamic_catalog' => $this->toggle->isEnabled('show_home_dynamic_catalog'),
             'show_contact_info' => $this->toggle->isEnabled('show_contact_info'),
             'show_commercial_name' => $showCommercialName,
             'commercial_name' => $showCommercialName ? 'My Little Friend Shop' : null,

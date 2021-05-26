@@ -25,6 +25,11 @@
 
 {% block body %}
     {% if show_home_dynamic_catalog %}
+        <div class="text-center">
+            {% for product in catalog %}
+                <img src="/images/uploads/{{ product.picture }}"/>
+            {% endfor %}
+        </div>
     {% else %}
         <div class="text-center">
             <img src="/images/pink-doll.png"/>

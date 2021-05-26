@@ -3,3 +3,24 @@
 #    controller: App\Controller\DefaultController::index
 logout:
   path: /logout
+
+toggle_detail:
+  methods: [GET]
+  path: /features/{feature_id}
+  controller: Pheature\Crud\Psr7\Toggle\GetFeature::handle
+feature_list:
+  methods: [GET]
+  path: /features
+  controller: Pheature\Crud\Psr7\Toggle\GetFeatures::handle
+feature_create:
+  methods: [POST]
+  path: /features/{feature_id}
+  controller: Pheature\Crud\Psr7\Toggle\PostFeature::handle
+feature_update:
+  methods: [PATCH]
+  path: /features/{feature_id}
+  controller: Pheature\Crud\Psr7\Toggle\PatchFeature::handle
+feature_remove:
+  methods: [DELETE]
+  path: /features/{feature_id}
+  controller: Pheature\Crud\Psr7\Toggle\DeleteFeature::handle

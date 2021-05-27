@@ -31,13 +31,14 @@ class DashboardController extends AbstractDashboardController
         $users = [];
         if ($this->isGranted('ROLE_ADMIN')) {
             $users = [
-                MenuItem::section('Users'),
+                MenuItem::section('Management'),
                 MenuItem::linkToCrud('Users', 'fa fa-user', User::class),
+                MenuItem::linktoRoute('Features', 'fa fa-flag', 'admin_features'),
             ];
         }
 
         $products = [
-            MenuItem::section('Products'),
+            MenuItem::section('Marketplace'),
             MenuItem::linkToCrud('Products', 'fa fa-gift', Product::class),
         ];
 

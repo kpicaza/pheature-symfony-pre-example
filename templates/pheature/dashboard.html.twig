@@ -1,0 +1,81 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title %}
+    Features
+{% endblock %}
+
+{% block page_actions %}
+    <div class="global-actions" style="display: block;">
+        <a class=" action-new btn btn-primary"
+           href="#"
+           data-action-name="new">Add Feature</a>
+
+    </div>
+    <div class="batch-actions" style="display: none;">
+        <a class="action-batchDelete btn btn-link pr-0 text-danger"
+           href="#"
+           data-action-name="batchDelete" data-toggle="modal" data-target="#modal-batch-action"
+           data-action-batch="true">Delete</a>
+
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="content-panel">
+        <div class="content-panel-body with-rounded-top with-min-h-250 without-padding">
+            <table class="table datagrid with-rounded-top ">
+                <thead>
+                <tr>
+                    <th width="1px">
+                        <span><input
+                                    type="checkbox"
+                                    class="form-batch-checkbox-all"
+                                    name="select_all_features"
+                            /></span></th>
+                    <th><a href="#">ID</a></th>
+                    <th><a href="#">Enabled</a></th>
+                    <th><a href="#">Strategies</a></th>
+                    <th dir="ltr"></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for feature in features %}
+                    <tr>
+                        <td>
+                            <input
+                                    type="checkbox"
+                                    class="form-batch-checkbox"
+                                    name="select_feature"
+                                    value="{{ feature.id }}"/>
+                        </td>
+                        <td>{{ feature.id }}</td>
+                        <td>
+                            <div class="custom-control custom-switch custom-switch-lg">
+                                <input
+                                        type="checkbox"
+                                        id="toggle_{{ feature.id }}"
+                                        class="custom-control-input"
+                                        autocomplete="off"
+                                        {% if feature.enabled %}checked{% endif %} >
+                                <label class="custom-control-label" for="toggle_{{ feature.id }}"></label>
+                            </div>
+                        </td>
+                        <td>
+                            {{ feature.strategies|length }}
+                        </td>
+                        <td class="actions">
+                            <a class="action-edit"
+                               href="#"
+                               data-action-name="edit">Manage strategies</a>
+                            <a class=" action-delete text-danger"
+                               href="#"
+                               data-action-name="delete"
+                               data-toggle="modal" data-target="#modal-delete">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

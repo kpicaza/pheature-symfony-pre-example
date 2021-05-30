@@ -17,13 +17,16 @@ In the following lines we will define the initial description of the ecommerce a
 ```bash
 git clone git@github.com:kpicaza/pheature-symfony-pre-example.git
 cd pheature-symfony-pre-example
-git submodule add git@github.com:feature-flags/toggle-ui.git assets/toggle-ui
-
-composer upddate
+git submodule update --init --recursive
+composer update
 yarn
+yarn build
 yarn run encore production
-php -S 127.0.0.1:8000 -t public ## Enjoy!!!
+docker-compose up --build -d
+docker-compose run php app/bin/console doctrine:migrations:migrate
 ```
+
+Open browser in [http://127.0.0.1](http://127.0.0.1).
 
 ## Context
 

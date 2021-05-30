@@ -1,0 +1,3 @@
+[submodule "toggle-ui"]
+    path = assets/toggle-ui
+    url = https://github.com/pheature-flags/toggle-ui.git

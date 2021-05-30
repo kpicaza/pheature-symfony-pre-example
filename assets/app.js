@@ -14,6 +14,3 @@ import 'bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
 import './styles/app.scss'
 
 $(document).ready(function() { $('body').bootstrapMaterialDesign(); });
-
-// start the Stimulus application
-import './bootstrap';

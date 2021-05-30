@@ -17,6 +17,8 @@ In the following lines we will define the initial description of the ecommerce a
 ```bash
 git clone git@github.com:kpicaza/pheature-symfony-pre-example.git
 cd pheature-symfony-pre-example
+git submodule add git@github.com:feature-flags/toggle-ui.git assets/toggle-ui
+
 composer upddate
 yarn
 yarn run encore production

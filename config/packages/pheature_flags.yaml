@@ -1,6 +1,7 @@
 pheature_flags:
   driver: dbal
   api_enabled: true
+  api_prefix: api
   toggles:
     # RELEASE TOGGLES
     - { id: show_brand_logo, enabled: true }

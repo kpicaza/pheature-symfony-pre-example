@@ -1,0 +1,9 @@
+@media (min-width: 1024px) {
+  .form-group {
+    label, legend.col-form-label {
+      flex: inherit;
+      margin: inherit;
+      text-align: left;
+    }
+  }
+}

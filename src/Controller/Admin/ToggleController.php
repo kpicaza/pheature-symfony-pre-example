@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace App\Controller\Admin;
 
 use Pheature\Core\Toggle\Read\FeatureFinder;
-use Psr\Http\Message\ResponseFactoryInterface;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

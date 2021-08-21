@@ -59,4 +59,8 @@ To create the products, we will need an authentication system for content editor
 - [x] It should have content editor users
 - [x] It should have products
 - [x] It should have a backoffice to add products
-- [ ] It should have a catalog that shows available products
+- [x] It should have a catalog that shows available products
+
+3. Third iteration
+
+

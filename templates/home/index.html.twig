@@ -6,11 +6,11 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4 text-center">
-                {% if show_brand_logo %}
+                {% if is_feature_enabled('show_brand_logo') %}
                     <i class="material-icons">pets</i>
                 {% endif %}
-                {% if show_commercial_name %}
-                    {{ commercial_name }}
+                {% if is_feature_enabled('show_commercial_name') %}
+                    My Little Friend Shop
                 {% else %}
                     Welcome to Site A
                 {% endif %}
@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block body %}
-    {% if show_home_dynamic_catalog %}
+    {% if is_feature_enabled('show_home_dynamic_catalog') %}
         <div class="text-center">
             {% for product in catalog %}
                 <img src="/images/uploads/{{ product.picture }}"/>
@@ -38,7 +38,7 @@
         </div>
     {% endif %}
 
-    {% if show_contact_info %}
+    {% if is_feature_enabled('show_contact_info') %}
         <div class=" text-center mt-5">
             <i class="material-icons">twitter</i>
             <p class="lead">Make your order via DM at <strong>@amigunerumi</strong>'s Twitter account.</p>

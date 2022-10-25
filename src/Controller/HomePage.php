@@ -22,24 +22,19 @@ final class HomePage extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(Request $request): Response
     {
-        $showCommercialName = $this->toggle->isEnabled('show_commercial_name');
         $showDynamicCatalog = $this->toggle->isEnabled('show_home_dynamic_catalog', new Identity('anon', [
             $request->query->get('role')
         ]));
 
         return $this->render('home/index.html.twig', [
-            'show_brand_logo' => $this->toggle->isEnabled('show_brand_logo'),
             'show_home_dynamic_catalog' => $showDynamicCatalog,
-            'catalog' => $this->getCatalog($showCommercialName),
-            'show_contact_info' => $this->toggle->isEnabled('show_contact_info'),
-            'show_commercial_name' => $showCommercialName,
-            'commercial_name' => $showCommercialName ? 'My Little Friend Shop' : null,
+            'catalog' => $this->getCatalog($showDynamicCatalog),
         ]);
     }
 
-    private function getCatalog(bool $showCommercialName): array
+    private function getCatalog(bool $showDynamicCatalog): array
     {
-        return $showCommercialName
+        return $showDynamicCatalog
             ? $this->productRepository->findAll()
             : [];
     }

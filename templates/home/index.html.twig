@@ -6,6 +6,9 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4 text-center">
+                {% if 'winter_promo' is enabled_for(identity) %}
+                    Happy holidays
+                {% endif %}
                 {% if is_feature_enabled('show_brand_logo') %}
                     <i class="material-icons">pets</i>
                 {% endif %}

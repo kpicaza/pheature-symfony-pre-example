@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f224cc699f25c339d40b5f21e9a501a",
+    "content-hash": "2f7ea853495cf66653c515c257d31207",
     "packages": [
+        {
+            "name": "beste/clock",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beste/clock.git",
+                "reference": "201ed087ca0fd9763716335a567f698482fe0e62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beste/clock/zipball/201ed087ca0fd9763716335a567f698482fe0e62",
+                "reference": "201ed087ca0fd9763716335a567f698482fe0e62",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.4.0 || ~8.0.0 || ~8.1.0",
+                "stella-maris/clock": "^0.1.4"
+            },
+            "provide": {
+                "psr/clock-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5.10",
+                "psalm/plugin-phpunit": "^0.16.0",
+                "vimeo/psalm": "^4.15"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Clock.php"
+                ],
+                "psr-4": {
+                    "Beste\\Clock\\": "src/Clock"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jérôme Gamez",
+                    "email": "jerome@gamez.name"
+                }
+            ],
+            "description": "A collection of Clock implementations",
+            "keywords": [
+                "clock",
+                "clock-interface",
+                "psr-20",
+                "psr20"
+            ],
+            "support": {
+                "issues": "https://github.com/beste/clock/issues",
+                "source": "https://github.com/beste/clock/tree/2.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jeromegamez",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-04-24T13:39:46+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "1.13.3",
@@ -1749,6 +1817,84 @@
             "time": "2022-06-22T07:13:36+00:00"
         },
         {
+            "name": "pheature/datetime-interval-segment-types",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pheature-flags/datetime-interval-segment-types.git",
+                "reference": "e5a4df6b30faf776a03fd5d486e14d29984c4a99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pheature-flags/datetime-interval-segment-types/zipball/e5a4df6b30faf776a03fd5d486e14d29984c4a99",
+                "reference": "e5a4df6b30faf776a03fd5d486e14d29984c4a99",
+                "shasum": ""
+            },
+            "require": {
+                "pheature/toggle-core": "^0.5",
+                "pheature/toggle-model": "^0.5",
+                "php": "^7.4|^8.0|^8.1",
+                "stella-maris/clock": "^0.1.6",
+                "webmozart/assert": "^1.11"
+            },
+            "require-dev": {
+                "beste/clock": "^2.1",
+                "icanhazstring/composer-unused": "^0.8",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpro/grumphp": "^1.0",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-webmozart-assert": "^1.2",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "roave/infection-static-analysis-plugin": "^1.18",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/var-dumper": "^4.2 || ^5.0 || ^6.0",
+                "vimeo/psalm": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "config-provider": "Pheature\\Model\\Toggle\\Container\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pheature\\Model\\DateTime\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "kpicaza"
+                },
+                {
+                    "name": "pcs289"
+                },
+                {
+                    "name": "xserrat"
+                }
+            ],
+            "description": "Pheature flags DateTime Interval Based Segment Types.",
+            "keywords": [
+                "feature-flags",
+                "feature-toggle"
+            ],
+            "support": {
+                "issues": "https://github.com/pheature-flags/datetime-interval-segment-types/issues",
+                "source": "https://github.com/pheature-flags/datetime-interval-segment-types/tree/0.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/pheature-flags",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-10-29T17:44:08+00:00"
+        },
+        {
             "name": "pheature/dbal-toggle",
             "version": "0.5.0",
             "source": {
@@ -2790,6 +2936,53 @@
                 "source": "https://github.com/php-fig/log/tree/2.0.0"
             },
             "time": "2021-07-14T16:41:46+00:00"
+        },
+        {
+            "name": "stella-maris/clock",
+            "version": "0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stella-maris-solutions/clock.git",
+                "reference": "a94228dac03c9a8411198ce8c8dacbbe99c930c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stella-maris-solutions/clock/zipball/a94228dac03c9a8411198ce8c8dacbbe99c930c3",
+                "reference": "a94228dac03c9a8411198ce8c8dacbbe99c930c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StellaMaris\\Clock\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Heigl",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A pre-release of the proposed PSR-20 Clock-Interface",
+            "homepage": "https://gitlab.com/stella-maris/clock",
+            "keywords": [
+                "clock",
+                "datetime",
+                "point in time",
+                "psr20"
+            ],
+            "support": {
+                "issues": "https://github.com/stella-maris-solutions/clock/issues",
+                "source": "https://github.com/stella-maris-solutions/clock/tree/0.1.6"
+            },
+            "time": "2022-09-27T15:03:11+00:00"
         },
         {
             "name": "symfony-bundles/json-request-bundle",

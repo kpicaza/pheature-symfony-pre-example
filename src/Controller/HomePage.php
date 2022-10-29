@@ -22,13 +22,15 @@ final class HomePage extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(Request $request): Response
     {
-        $showDynamicCatalog = $this->toggle->isEnabled('show_home_dynamic_catalog', new Identity('anon', [
+        $identity = new Identity('anon', [
             $request->query->get('role')
-        ]));
+        ]);
+        $showDynamicCatalog = $this->toggle->isEnabled('show_home_dynamic_catalog', $identity);
 
         return $this->render('home/index.html.twig', [
             'show_home_dynamic_catalog' => $showDynamicCatalog,
             'catalog' => $this->getCatalog($showDynamicCatalog),
+            'identity' => $identity,
         ]);
     }
 

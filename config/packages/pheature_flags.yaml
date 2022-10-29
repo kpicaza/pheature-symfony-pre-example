@@ -6,3 +6,33 @@ pheature_flags:
   toggles:
     # RELEASE TOGGLES
     - { id: shopping_cart, enabled: true }
+    - id: winter_promo
+      enabled: true
+      strategies:
+        - strategy_id: winter_promo_weeks
+          strategy_type: enable_by_matching_segment
+          segments:
+            - segment_id: week_1_winter_promo
+              segment_type: datetime_matching_segment
+              criteria:
+                start_datetime: '2022-10-29 11:30:00'
+                end_datetime: '2022-11-05 11:30:00'
+                timezone: 'Europe/Madrid'
+  segment_types:
+    - { type: 'datetime_matching_segment', factory_id: 'Pheature\Model\DateTime\IntervalSegmentFactory' }
+    - { type: 'datetime_strict_matching_segment', factory_id: 'Pheature\Model\DateTime\IntervalSegmentFactory' }
+
+services:
+  StellaMaris\Clock\ClockInterface:
+    class: Beste\Clock\SystemClock
+    factory: [Beste\Clock\SystemClock, 'create']
+
+  datetime_matching_segment:
+    class: Pheature\Model\DateTime\IntervalSegmentFactory
+    arguments:
+      - '@StellaMaris\Clock\ClockInterface'
+
+  datetime_strict_matching_segment:
+    class: Pheature\Model\DateTime\IntervalSegmentFactory
+    arguments:
+      - '@StellaMaris\Clock\ClockInterface'

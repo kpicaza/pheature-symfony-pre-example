@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.20
 
 RUN apt update && apt install openssl -y
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048  -keyout /etc/nginx/nginx.key -out /etc/nginx/nginx.crt -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=example.com"

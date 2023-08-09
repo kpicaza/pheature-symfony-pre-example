@@ -16,9 +16,12 @@ pheature_flags:
               segment_type: datetime_matching_segment
               criteria:
                 start_datetime: '2022-10-29 11:30:00'
-                end_datetime: '2022-11-05 11:30:00'
+                end_datetime: '2023-11-05 11:30:00'
                 timezone: 'Europe/Madrid'
   segment_types:
+    - { type: 'identity_segment', factory_id: 'Pheature\Model\Toggle\SegmentFactory' }
+    - { type: 'strict_matching_segment', factory_id: 'Pheature\Model\Toggle\SegmentFactory' }
+    - { type: 'in_collection_matching_segment', factory_id: 'Pheature\Model\Toggle\SegmentFactory' }
     - { type: 'datetime_matching_segment', factory_id: 'Pheature\Model\DateTime\IntervalSegmentFactory' }
     - { type: 'datetime_strict_matching_segment', factory_id: 'Pheature\Model\DateTime\IntervalSegmentFactory' }
 

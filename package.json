@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
         "@symfony/stimulus-bridge": "^2.0.0",
         "@symfony/webpack-encore": "^1.0.0",
         "bootstrap-material-design": "4.1.1",
@@ -13,7 +14,7 @@
         "stimulus": "^2.0.0",
         "stylus": "^0.54.8",
         "stylus-loader": "^5.0.0",
-        "ts-loader": "^8.0.1",
+        "ts-loader": "^9.0.0",
         "typescript": "^4.3.2",
         "webpack-notifier": "^1.6.0"
     },
@@ -30,8 +31,10 @@
         "@material/data-table": "^11.0.0",
         "@material/mwc-dialog": "^0.21.0",
         "@material/mwc-formfield": "^0.21.0",
+        "@material/mwc-icon-button": "^0.27.0",
         "@material/mwc-select": "^0.21.0",
         "@material/mwc-switch": "^0.21.0",
+        "@material/mwc-textarea": "^0.27.0",
         "@material/mwc-textfield": "^0.21.0"
     }
 }

@@ -14,11 +14,11 @@
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "easycorp/easyadmin-bundle": "^3.2",
         "nyholm/psr7": "^1.4",
-        "pheature/datetime-interval-segment-types": "^0.6.0",
-        "pheature/dbal-toggle": "^0.5",
-        "pheature/inmemory-toggle": "^0.5",
-        "pheature/symfony-toggle": "^0.6",
-        "pheature/toggle-crud-psr7-api": "^0.5",
+        "pheature/datetime-interval-segment-types": "^0.7",
+        "pheature/dbal-toggle": "^0.7",
+        "pheature/inmemory-toggle": "^0.7",
+        "pheature/symfony-toggle": "^0.7",
+        "pheature/toggle-crud-psr7-api": "^0.7",
         "symfony-bundles/json-request-bundle": "^4.0",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",
@@ -36,7 +36,10 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true
+        }
     },
     "autoload": {
         "psr-4": {

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Controller\Admin;
 
 use Pheature\Core\Toggle\Read\FeatureFinder;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class ToggleController extends AbstractController
+final class ToggleController extends DashboardController
 {
     private FeatureFinder $featureFinder;
 
@@ -17,10 +17,8 @@ final class ToggleController extends AbstractController
         $this->featureFinder = $featureFinder;
     }
 
-    /**
-     * @Route("/admin/features", name="admin_features")
-     */
-    public function index()
+    #[Route(path: '/admin/features', name: 'admin_features')]
+    public function index(): Response
     {
         $features = $this->featureFinder->all();
 

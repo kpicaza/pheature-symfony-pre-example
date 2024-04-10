@@ -1,16 +1,5 @@
-{% extends '@EasyAdmin/page/content.html.twig' %}
-
-{% block page_title %}
-    Features
-{% endblock %}
-
-{% block main %}
-    <div class="content-panel">
-        <div class="content-panel-body with-rounded-top with-min-h-250 without-padding">
-            <toggle-list api-url={{ 'http://127.0.0.1/api' }}></toggle-list>
-        </div>
-    </div>
-{% endblock %}
+{# templates/admin/my_dashboard.html.twig #}
+{% extends '@EasyAdmin/layout.html.twig' %}
 
 
 {% block head_stylesheets %}
@@ -21,7 +10,6 @@
     <link rel="stylesheet" href="{{ asset('build/admincss.css') }}">
 {% endblock %}
 
-
-{% block body_javascript %}
-    {{ encore_entry_script_tags('feature-admin') }}
-{% endblock body_javascript %}
+{% block main %}
+    {# ... #}
+{% endblock main %}

@@ -22,9 +22,9 @@ composer update
 yarn
 yarn build
 yarn run encore production
-docker-compose up --build -d
-docker-compose run php app/bin/console doctrine:migrations:migrate
-docker-compose run php app/bin/console app:create:admin # user: test@example.com, password: pheature
+docker compose up --build -d
+docker compose run php bin/console doctrine:migrations:migrate
+docker compose run php bin/console app:create:admin # user: test@example.com, password: pheature
 ```
 
 Open browser in [http://127.0.0.1](http://127.0.0.1) you can see the website, or access to admin area

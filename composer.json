@@ -10,26 +10,26 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "beste/clock": "^2.1",
-        "doctrine/annotations": "^1.12",
         "doctrine/doctrine-migrations-bundle": "^3.1",
-        "easycorp/easyadmin-bundle": "^3.2",
+        "doctrine/orm": "^3.0",
+        "easycorp/easyadmin-bundle": "^4.9",
         "nyholm/psr7": "^1.4",
-        "pheature/datetime-interval-segment-types": "^0.7",
-        "pheature/dbal-toggle": "^0.7",
-        "pheature/inmemory-toggle": "^0.7",
-        "pheature/symfony-toggle": "^0.7",
-        "pheature/toggle-crud-psr7-api": "^0.7",
-        "symfony-bundles/json-request-bundle": "^4.0",
-        "symfony/console": "5.2.*",
-        "symfony/dotenv": "5.2.*",
+        "pheature/datetime-interval-segment-types": "^0.8",
+        "pheature/dbal-toggle": "^0.8",
+        "pheature/inmemory-toggle": "^0.8",
+        "pheature/symfony-toggle": "^0.8",
+        "pheature/toggle-crud-psr7-api": "^0.8",
+        "pheature/toggle-model": "^0.8",
+        "symfony/console": "7.0.*",
+        "symfony/dotenv": "7.0.*",
         "symfony/flex": "^1.3.1",
-        "symfony/framework-bundle": "5.2.*",
-        "symfony/mime": "5.2.*",
-        "symfony/psr-http-message-bridge": "^2.1",
-        "symfony/security-bundle": "5.2.*",
-        "symfony/twig-bundle": "5.2.*",
-        "symfony/webpack-encore-bundle": "^1.11",
-        "symfony/yaml": "5.2.*"
+        "symfony/framework-bundle": "7.0.*",
+        "symfony/mime": "7.0.*",
+        "symfony/psr-http-message-bridge": "^6.4",
+        "symfony/security-bundle": "7.0.*",
+        "symfony/twig-bundle": "7.0.*",
+        "symfony/webpack-encore-bundle": "^2.1",
+        "symfony/yaml": "7.0.*"
     },
     "config": {
         "optimize-autoloader": true,
@@ -74,12 +74,13 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "5.2.*"
+            "require": "7.0.*"
         }
     },
     "require-dev": {
+        "rector/rector": "^1.0",
         "symfony/maker-bundle": "^1.30",
-        "symfony/stopwatch": "^5.2",
-        "symfony/web-profiler-bundle": "^5.2"
+        "symfony/stopwatch": "^7.0",
+        "symfony/web-profiler-bundle": "^7.0"
     }
 }
